@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container">
+  <form action="/update/{{contacto.id}}" method="post" class="card bg-dark text-white p-3">
+    <div class="mb-3">
+        <label for="nombre">Escribe tu Nombre Completo</label>
+        <input
+        type="text"
+        class="form-control mb-3"
+        name="nombre"
+        id="txtNombre"
+        value="{{contacto.nombre}}"
+        />
+    </div>
+    
+    <div class="mb-3">
+        <label for="email">Escribe tu Email</label>
+        <input
+        type="email"
+        class="form-control mb-3"
+        name="email"
+        id="txtEmail"
+        value="{{contacto.email}}"
+        />
+    </div>
+    <div class="mb-3">
+        <label for="tel">Escribe tu Teléfono</label>
+        <input
+        type="text"
+        class="form-control mb-3"
+        name="tel"
+        id="txtTel"
+        value="{{contacto.tel}}"
+        />
+    </div>
+    <div class="mb-3">
+        <label for="foto">Direccion web de la imagen</label>
+        <input
+        type="text"
+        class="form-control mb-3"
+        name="foto"
+        id="txtFoto"
+        value="{{contacto.foto}}"
+        />
+    </div>
+
+    <button class="btn btn-primary m-4">Guardar</button>
+  </form>
+</div>
+
+{% endblock %}

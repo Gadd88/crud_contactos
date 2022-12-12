@@ -1,0 +1,44 @@
+{% extends 'layout.html' %} {% block body %}
+
+<div class="container">
+    {% include('partials/_mensajes.html') %}
+  <div class="row">
+
+    <div class="col-md-5">
+      {% include('partials/_formulario.html') %}
+    </div>
+
+    <div class="col-md-7">
+        {% for contacto in contactos %}
+        <div class="card mb-1 text-white bg-dark">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h5>{{contacto.nombre}}</h5>
+              <div class="botones d-flex justify-content">
+                <a
+                href="{{url_for('contactos.update', id=contacto.id)}}"
+                class="btn btn-success btn-sm rounded-0 border-light mx-1"
+                >Actualizar</a
+                >
+                <a
+                  href="{{url_for('contactos.delete', id=contacto.id)}}"
+                  class="btn btn-danger btn-sm rounded-0 border-light mx-1"
+                  >Eliminar</a
+                >
+              </div>
+            </div>
+            <p>{{contacto.email}}</p>
+            <p>{{contacto.tel}}</p>
+            <img src="{{contacto.foto}}" class="img-thumbnail w-25 h-25" />
+            
+          </div>
+        </div>
+        {%endfor%}
+    </div>
+
+  </div>
+
+  
+  
+</div>
+{% endblock %}
