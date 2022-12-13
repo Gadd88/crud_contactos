@@ -1,0 +1,23 @@
+body{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+h1{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.card{
+    border: 2px solid white;
+}
+
+.form-control{
+    cursor: pointer;
+}
+
+.card:hover{
+    border: 2px solid rgb(0, 119, 255);
+    transform: scale(1.02) skewX(-2deg);
+    z-index: 10;
+}

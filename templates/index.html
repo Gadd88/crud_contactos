@@ -1,8 +1,12 @@
-{% extends 'layout.html' %} {% block body %}
+{% extends 'layout.html' %} 
+
+{% block body %}
 
 <div class="container">
     {% include('partials/_mensajes.html') %}
   <div class="row">
+    
+    <h1 class="text-center mb-5">Libreta de Contactos</h1>
 
     <div class="col-md-5">
       {% include('partials/_formulario.html') %}
